@@ -1,10 +1,3 @@
-11.09
-- Course: Advanced Bootcamp
-  - Topic: S12 - Object Oriented Programming in JS
-    -
-
-
-
 
 ===== 10.25 =====
   - Course: Udemy, Adv WebDev BootCamp
@@ -33,6 +26,10 @@ Call/apply/bind.
 
 
 ===== 11.09 =====
+- Course: Advanced Bootcamp
+  - Topic: S12 - Object Oriented Programming in JS
+    -
+
   - Course: JS Weird Parts
   - Topic: By value vs. by reference
 
@@ -94,3 +91,37 @@ This is different than how we made AJAX requests in the WordPress REST API cours
   - Finish JS Weird Parts course, to help solidify JavaScript understanding. From there, maybe look into
   other 'advanced' resources I've read about, like YDKJS or Eloquent JS.
   - Start Wes Bos JS30 course. Short daily projects
+
+===== 11.14 =====
+
+- Harvard CS50: Week 6 Lecture
+Watched first half, introduction to Python. How languages 'evolve' over time, C -> JavaScript -> Python
+
+- Adv Bootcamp
+  - Skipped S16, which was a coding project. Didn't have the mental capacity for tackling a full project.
+  Will definitely come back to.
+  - Started S17: ES2015 part 2. Covered classes & inheritance.
+
+- Personal Projects:
+  - Spent about an hour on my fishing app. It's been awhile since I did any work on it, so spent some
+  time re-familiarizing myself, and then did some refactoring. Took out the 'river sections' and 'comments'
+  for now (model schemas, routes, views), since it just adds a lot of unnecessary clutter right now. Want to
+  focus just on core features, and then I can add those functionalities back in later.
+
+===== 11.15 =====
+
+- React Complete Course
+  - Although React is covered in the Advanced Bootcamp course, the first couple lectures on it were really
+  underwhelming. The instructor who teaches it (not Colt for React) is clearly smart, but doesn't seem to be
+  a very good teacher. Lots of stuff kinda glossed over, or flat out skipped. Read through the course reviews and
+  found lots of others who were disappointed by the React section. So, ended up buying a full new course
+  dedicated to React.
+
+
+===== 11.17 =====
+  - React S3: Base Features & Syntax
+    - Folder structure, Component basics, JSX, high-level props & state
+    - Built basic React app where text field updates to match input text field
+
+===== 11.19 =====
+  - React S4: Working with Lists & Conditionals
