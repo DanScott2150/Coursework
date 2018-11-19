@@ -125,3 +125,13 @@ Watched first half, introduction to Python. How languages 'evolve' over time, C 
 
 ===== 11.19 =====
   - React S4: Working with Lists & Conditionals
+    - Refactored code from S3 to loop through 'Person's and print out a component for each,
+    rather than having all 3 hardcoded.
+    - Added a toggle button that shows/hides the div containing all persons. Added a property
+    to state to determine if we showPersons, then added conditional logic to decide whether to print out <Person>
+    components. (Not the best explanation).
+
+    ** Definitely want to practice more with ES6, specifically arrow functions, 'this', and the ...spread operator.
+    These are getting used a lot, and I feel like I sort of understand but not as much as I should.
+
+    - Spent 15-20 minutes answering a few questions on r/learnjavascript
