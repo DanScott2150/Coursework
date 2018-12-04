@@ -35,15 +35,15 @@ When functions get invoked, they create a new EC. This EC is 'stacked' on top
 of the Global EC. EC on the top ofthe 'stack' is the one currently running
 
 Reference to Outer Environment: Depends on where the code sits lexically.
-function b(){
-  console.log(myVar);
-}
-function a(){
-  var myVar = 2;
-  b();
-}
-var myVar = 1;
-a();
+      function b(){
+        console.log(myVar);
+      }
+      function a(){
+        var myVar = 2;
+        b();
+      }
+      var myVar = 1;
+      a();
 
 Above code will console.log myVar as 1. Even though b() has an EC on the top
 of a(), it's reference to Outer Environment is the global object, since the function

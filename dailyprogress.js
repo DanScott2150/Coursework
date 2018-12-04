@@ -135,3 +135,8 @@ Watched first half, introduction to Python. How languages 'evolve' over time, C 
     These are getting used a lot, and I feel like I sort of understand but not as much as I should.
 
     - Spent 15-20 minutes answering a few questions on r/learnjavascript
+
+===== 11.20 =====
+  - JavaScript30: Day 1 completed
+
+  

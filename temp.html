@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function createTable(tableData) {
+    var table = document.createElement('table');
+    var tableBody = document.createElement('tbody');
+
+    tableData.forEach(function(rowData) {
+      var row = document.createElement('tr');
+
+      rowData.forEach(function(cellData) {
+        var cell = document.createElement('td');
+        cell.appendChild(document.createTextNode(cellData));
+        row.appendChild(cell);
+      });
+
+      tableBody.appendChild(row);
+    });
+
+    table.appendChild(tableBody);
+    document.body.appendChild(table);
+  }
+
+function createData(data, split){
+  var i = 0;
+  var newArray = [];
+  var newRow = [];
+
+  for(i = 0; i<data.length; i += split){
+    newRow = data.slice(i, i+split);
+    newArray.push(newRow);
+  }
+
+  return newArray;
+}
+
+var data = ['', '', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+var result = createData(data, 7);
+
+  //var result = [
+      //  ['', '', '1', '2', '3', '4', '5'],
+        //['6', '7', '8', '9', '10', '11', '12']
+      //  ];
+
+
+
+
+createTable(result);
+    </script>
+  </body>
+</html>
