@@ -139,4 +139,25 @@ Watched first half, introduction to Python. How languages 'evolve' over time, C 
 ===== 11.20 =====
   - JavaScript30: Day 1 completed
 
-  
+===== 12.04 =====
+Took some time off, was busy with work & social committments,
+and then visiting family for Thanksgiving. Back now, and ready to get back into it!
+
+  - React S5: Styling Components & Elements
+    - Radium for dynamic styling, pseudoselectors & media queries
+    - CSS Modules, went through 'npm eject' and edited webpack config
+        files in order to enable CSS Module-scope. Apparently this process
+        isn't necessary anymore with newer versions of React
+
+  - React S6: Debugging react
+    - Installed chome extension React Developer Tools, shows React debugger in Chrome Dev Tools now
+    - ErrorBoundary's
+
+  - Personal Projects:
+      - Fish App:
+          - Trying to make a "Dashboard" on the main page, which shows the 10-day forecast, flow rate, and last stocking for
+            each river. Thought this would be easy, since I already pull all this data for each of the rivers. However, I pull
+            that data via middleware when accessing the show route, so have to finagle the code a bit so that it also pulls
+            when viewing the root index route.
+      - SDL Controller:
+          - Haven't worked much on this for awhile. Getting the ball rolling again. 
