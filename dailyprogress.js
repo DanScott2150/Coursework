@@ -160,4 +160,109 @@ and then visiting family for Thanksgiving. Back now, and ready to get back into 
             that data via middleware when accessing the show route, so have to finagle the code a bit so that it also pulls
             when viewing the root index route.
       - SDL Controller:
-          - Haven't worked much on this for awhile. Getting the ball rolling again. 
+          - Haven't worked much on this for awhile. Getting the ball rolling again.
+
+===== 12.05 =====
+  - React S7: Diving Deeper into Components & React Internals
+    - Refactoring prior tutorial code
+    - Splitting app into components
+    - Stateless vs. Stateful components
+    - Component lifecycle
+        - Creation lifecycle
+        - Update lifecycle
+
+Stateless vs. Stateful components. Should aim to use stateless components as much as possible, keeps app manageable
+Use class based components as little as possible.
+
+Stateful (containers)
+  - 'class XY extends Component'
+  - Access to state
+  - Lifecycle hooks (will learn about later)
+  - Access state & props via 'this'. this.state.XY, this.props.XY
+  - Use only if you need to manage state or access Lifecycle hooks
+
+Stateless (functional components)
+  - 'const XY = (props) => {...}'
+  - Access props via 'props' argument. props.XY
+  - Use in most cases
+
+Component Lifecycle - only available for stateful components
+
+Creation lifecycle:
+  - constructor(props) - default ES6 class feature
+    - call super(props), set up state
+
+  - componentWillMount()
+    - Exists for historical reasons. Not really used anymore
+
+  - render()
+    - Prepare & structure JSX code
+
+  - Render Child Components
+  - componentDidMount()
+    - Don't update state (triggers re-render)
+    - Perform 'side effects' here
+
+Update lifecycle [Triggered by Parent]:
+  - componentWillReceiveProps(nextProps)
+    - Sync state to props. Don't use side effects
+
+  - shouldComponentUpdate(nextProps, nextState)
+    - May cancel updating process.
+    - Decide whether to continue updating or not. Needs to return true or false
+      - if true, then continue to next lifecycle methods:
+
+  - componentWillUpdate(nextProps, nextState)
+    - sync state to props
+
+  - render()
+    - Prepare and structure JSX code
+
+  - Update child component props
+    -may trigger updates for childcomponents
+
+  - componentDidUpdate()
+    - Can call side-effects here.
+    - Don't update state here, will trigger re-render
+
+Update lifecycle [triggered by state change]:
+Basically same, except componentWillReceiveProps() is skipped
+
+  - shouldComponentUpdate(nextProps, nextState)
+  - componentWillUpdate()
+  - render()
+  - Update Child Component Props
+  - componentDidUpdate()
+
+Can use shouldComponentUpdate() to check if anything actually changed, prevent
+all components from re-rendering for no reason. *OR*, better method:
+
+PureComponent : React component that has built-in check in shouldComponentUpdate() method.
+Compares previous props & state with new props & state. If different, shouldComponentUpdate()
+auto evaluates to true, otherwise false.
+
+Shouldn't use PureComponents everywhere, only if you know that updates might not be required
+
+
+render() does not update the DOM.
+Compares "virtual" DOMs.
+Virtual DOM faster than real DOM.
+If differences in old & new VDOMs, then "real" DOM is updated
+Accessing DOM is slow, React speeds up by only accessing if needed
+
+Returning Adjacent Elements:
+By default, can't render() elements next to each other, have
+to be within a 'wrapper'.
+Can get around this in React16+ by creating a higher-order-component.
+In 'persons' example, 'hoc/auxiliary.js' file. This creates an empty
+wrapper, so then Cockpit section doesn't need wrapping div.
+
+This can be useful when you either don't need extra wrapping elements (bloat code),
+or when adding extra divs/etc can ruin your styling (like when using flexbox).
+
+Note, can't name file/folder 'aux' since that's a special keyword or something for Windows.
+
+Fragment-
+In React 16.2, can use built-in 'Aux' component, called a Fragment.
+Instead of wrapping render() code in <Aux>, can just use empty tag <>.
+Works behind the scenes same way as manually-code 'hoc/auxiliary.js' file in example.
