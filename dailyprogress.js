@@ -266,3 +266,32 @@ Fragment-
 In React 16.2, can use built-in 'Aux' component, called a Fragment.
 Instead of wrapping render() code in <Aux>, can just use empty tag <>.
 Works behind the scenes same way as manually-code 'hoc/auxiliary.js' file in example.
+
+Higher-order Components,
+Can create HOC as a component, i.e. <Aux></Aux> tag
+or, can create as a basic JS function, and then wrap individual component exports in function
+For this, have to pass props into component via ES6 spread operator
+
+Using 'setState()', should never mutate state directly.
+Should pass in function that has prevState as an argument
+  i.e. instead of:
+  togglePersonsHandler = () => {
+    this.setState({
+        toggleClicked: prevState.toggleClicked + 1
+      });
+    }
+
+  instead use a function that returns new state:
+  togglePersonsHandler = () => {
+    this.setState( (prevState, props) => {
+      return {
+        toggleClicked: prevState.toggleClicked + 1
+      }
+    });
+
+First case will work, but second case is best practice. Useful incase state gets altered elsewhere too
+
+Validating Props:
+npm install prop-types
+Built by react team, just split out into separate library
+Especially useful when working with other dev's
