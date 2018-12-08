@@ -295,3 +295,14 @@ Validating Props:
 npm install prop-types
 Built by react team, just split out into separate library
 Especially useful when working with other dev's
+
+===== 12.08 =====
+Made solid progress on my drone law scraper program. After running an API call to OpenStates and
+returning a list of laws, the program now successfully queries the WordPress API and compares OSID #'s.
+In other words, the scraper now automatically checks which laws are 'new', vs. which laws are already
+present on the website.
+
+Right now the code works, but is in bad shape. Need to re-visit promises. Code currently makes use
+of multiple setTimeout() functions, which I know is bad practice. I've looked at promises before,
+specifically for this project, but I guess I didn't internalize it as well as I thought. Definitely
+need to do another promises deep-dive.
