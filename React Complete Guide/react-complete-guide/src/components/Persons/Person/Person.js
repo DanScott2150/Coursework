@@ -6,6 +6,8 @@ import Auxiliary from '../../../hoc/Auxiliary';
 
 import classes from './Person.css';
 
+import { AuthContext } from '../../../containers/App';
+
 class Person extends Component {
 
   constructor(props){
@@ -28,6 +30,9 @@ class Person extends Component {
         console.log('[person.js] inside render');
     return (
       <Auxiliary>
+        <AuthContext.Consumer>
+          {auth => auth ? <p>I'm Authenticated </p> : null}
+        </AuthContext.Consumer>
        <p onClick={this.props.click}>I'm {this.props.name} and I'm {this.props.age} years old!</p>
        <p>{this.props.children}</p>
        <input

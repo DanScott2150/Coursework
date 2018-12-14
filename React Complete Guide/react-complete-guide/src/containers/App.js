@@ -5,6 +5,7 @@ import Cockpit from '../components/Cockpit/Cockpit';
 import Auxiliary from '../hoc/Auxiliary';
 import withClass from '../hoc/withClass';
 
+export const AuthContext = React.createContext(false);
 // import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
 
 class App extends PureComponent {
@@ -19,7 +20,8 @@ class App extends PureComponent {
       ],
       // userName: "Dan",
       showPersons: false,
-      toggleClicked: 0
+      toggleClicked: 0,
+      authenticated: false
     };
   }
 
@@ -39,6 +41,14 @@ class App extends PureComponent {
 
   componentWillUpdate(nextProps, nextState){
     console.log('[UPDATE App.js] inside componentWillUpdate', nextProps, nextState);
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState){
+    console.log('[UPDATE App.js inside getDerivedStateFromProps]',
+                  nextProps,
+                  prevState
+                );
+    return prevState;
   }
 
   componentDidUpdate(){
@@ -84,6 +94,10 @@ class App extends PureComponent {
     });
   }
 
+  loginHandler = () => {
+    this.setState({authenticated: true});
+  }
+
   render() {
     console.log('[App.js] inside render()');
 
@@ -105,11 +119,14 @@ class App extends PureComponent {
             <Cockpit
               showPersons={this.state.showPersons}
               persons={this.state.persons}
+              login={this.loginHandler}
               clicked={this.togglePersonsHandler}
             />
+            <AuthContext.Provider value={this.state.authenticated}>
+              {persons}
+            </AuthContext.Provider>
 
-            {persons}
-</Auxiliary>
+        </Auxiliary>
 
     );
   }
