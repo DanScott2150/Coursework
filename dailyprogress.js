@@ -193,4 +193,8 @@ Have been making progress the past few days, but have gotten a bit lazy at updat
     - Been making a lot of progress on the 'auto-update' functionality for StateDroneLaw.com. Ran into a bug today
     though, in that the 'show laws' code no longer works. This is because I had to add some code to my functions.php
     in order to let me query WordPress for an ACF value. Need to re-visit that code to see how to fix it.
-    
+
+===== 12.15 =====
+  - Course: JavaScript Weird Part
+    - Went through closures in-depth, and how they commonly get used by "function factories" within frameworks.
+    - Started on call() bind() apply()
