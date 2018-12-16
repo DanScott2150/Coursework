@@ -198,3 +198,9 @@ Have been making progress the past few days, but have gotten a bit lazy at updat
   - Course: JavaScript Weird Part
     - Went through closures in-depth, and how they commonly get used by "function factories" within frameworks.
     - Started on call() bind() apply()
+
+===== 12.16 =====
+  - JS Weird Parts
+    - call, bind apply, and how they're used in function borrowing and function currying.
+    - Looked at functional programming.
+    - Finished section 4, which was a long one.

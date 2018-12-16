@@ -104,33 +104,3 @@ S4-49 : Closures & Callbacks
 setTimeout() is an example of closures. In the above example,
 sayHiLater() has finished running by the time the function in timeout
 runs, but still has access to var greeting.
-
-
-S4-50: call() apply() bind()
-
-Function: special type of object.
-- contains NAME property, but can be anonymous
-- contains CODE property, which is invokable()
-- Access to special methods:
-  - call()
-  - apply()
-  - bind()
-
-      var person = {
-        firstname: 'John',
-        lastname: 'Doe',
-        getFullName: function(){
-          var fullname = this.firstname + this.lastname;
-          return fullname;
-        }
-      }
-
-      var logName = function(lang1, lang2){
-        console.log("logged: " + this.getFullName());
-      }
-
-      var logPersonName = logName.bind(person);
-
-
-By calling bind(person), it returns the logName() function
-where 'this' points to the person object, rather than the global object.
