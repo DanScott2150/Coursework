@@ -103,5 +103,3 @@ website has an "annotated source" link, which breaks out comments from source co
 
 Underscore.js makes strong use of functional programming.
 Lodash - similar
-
----- Section 5: Object Oriented JavaScript & Prototypal Inheritance -----

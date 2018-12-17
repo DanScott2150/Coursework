@@ -204,3 +204,16 @@ Have been making progress the past few days, but have gotten a bit lazy at updat
     - call, bind apply, and how they're used in function borrowing and function currying.
     - Looked at functional programming.
     - Finished section 4, which was a long one.
+
+===== 12.17 =====
+  - JS Weird Parts
+    - Objects, classical inheritance vs. prototypal inheritance
+    - Looked closely at prototypes and how they work, __proto__, prototype chain
+    - Everything (aside from primitives) is an object at its core.
+        - Arrays have an empty array prototype, which then has a base object prototype
+        - Same for functions
+        - Prototype Chain is why arrays/functions/objects all have access to certain methods/properties
+          - i.e. All functions have access to call, bind, apply. Arrays have access to pop, slice, indexOf, etc.
+          - This is because those methods are attached to the base function/array prototype
+    - Started Section 6, on Objects.
+      - 'new' keyword and how it works.
