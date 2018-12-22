@@ -217,3 +217,12 @@ Have been making progress the past few days, but have gotten a bit lazy at updat
           - This is because those methods are attached to the base function/array prototype
     - Started Section 6, on Objects.
       - 'new' keyword and how it works.
+
+===== 12.23 =====
+  - JS Weird Parts
+    - Finished the 'Building Objects' section.
+      - use of function constructors and using the .prototype, performance gains on putting methods on
+        prototype instead of in the actual constructor.
+      - 'new' keyword and how it creates an Object, even if you're using 'new Array' or 'new Date'
+      - object.create()
+      - ES6 and introduction of classes

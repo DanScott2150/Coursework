@@ -62,7 +62,7 @@ Object has access to property 3, even though it's on the prototype of the protot
       var b = function(){ };
       var c = [];
 
-a.__proto__ returns Base Object{}. This is the bottom of the Object prototype chain.
+a.__proto__ returns "Base" Object{}. This is the bottom of the Object prototype chain.
 Base Object has certain properties/methods attached to it.
 These are available to all Objects.
 'hasOwnProperty', 'isPrototypeOf', 'toString', etc.
@@ -79,6 +79,8 @@ This is why all arrays have access to built-in methods/props.
 
 b.__proto__.__proto__ >> base Object{}
 c.__proto__.__proto__ >> base Object{}
+
+...because in JavaScript, everything is an Object at its core.
 
 *S5-56: Reflection & Extend
 Reflection - An object can look at itself, listing and changing its properties & methods
@@ -135,7 +137,7 @@ Reflection - An object can look at itself, listing and changing its properties &
 ** Assignment: Look thru Underscores source code to understand the
 inner-workings of _.extend()
 
-In ES6, there will be an 'extends' feature.
+In ES6, there is an 'extends' feature. [This course was pre-ES6]
 
 ===== Section 6: Building Objects =====
 
