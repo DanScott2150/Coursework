@@ -226,3 +226,8 @@ Have been making progress the past few days, but have gotten a bit lazy at updat
       - 'new' keyword and how it creates an Object, even if you're using 'new Array' or 'new Date'
       - object.create()
       - ES6 and introduction of classes
+
+===== 12.24 =====
+  - WB JavaScript 30
+    - Completed Day 22 - Follow along links
+      - New (to me) method: getBoundingClientRect()

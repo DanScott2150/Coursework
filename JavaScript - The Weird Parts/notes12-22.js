@@ -149,3 +149,83 @@ Object.create() not fully supported in older browsers, need a polyfill >>
 --S6-64 : ES6 and Classes
 
 In ES6, can use classes to define objects.
+
+Section 7 : Odds & Ends
+
+typeOf, instanceOf, and figuring out what something is.
+Note that typeof does not return the capitalized-version (i.e. the Object)
+but only returns a string whos value is set to the type.
+
+      var a = 3;
+      console.log(typeof a);  //number [note: NOT Number capitalized]
+
+Value returned is 'number' as a string. Not Number capitalized, or
+Number with standard object properties/methods.
+
+      var b = "Hello";
+      console.log(typeof b);  //string
+
+      var c = {};
+      console.log(typeof c);  //object
+
+      var d = [];
+      console.log(typeof d);   //object
+
+Note that typeof for array is object. Not always practical in real life applications.
+Instead have to use:
+
+    console.log(Object.prototype.toString.call(d));   //
+
+    function Person(name){
+      this.name = name;
+    }
+
+Instanceof checks prototype chain. In below example, does var e
+have 'Person' in its prototype chain?
+
+    var e = new Person('Jane');
+    console.log(typeof e);    //object
+    console.log(e instanceof Person); //true
+
+    console.log(typeof undefined);    //undefined
+
+
+    console.log(typeof null);   //object
+
+Typeof null returning 'object' is a bug.
+BUT, lots of libraries & frameworks rely on this to some extent, so it's never been fixed.
+
+      var z = function(){};
+      console.log(typeof z);    //function
+
+S7-67: Strict Mode
+Can 'opt in' to have JS engine be stricter in rendering your code.
+Can help prevent certain errors in certain circumstances.
+
+Example below of mis-spelling person the second time.
+
+      var person;
+
+      persom = {};
+      console.log(persom);  //Object{}
+
+In above example, you end up with two different variables. When typing
+'persom', JavaScript just creates a new variable, even though that's not
+what was intended. This can create lots of errors that are tough to track down.
+
+Instead, can add code: "use strict";
+
+      "use strict";
+      var person;
+
+      persom = {};
+      console.log(persom);  //ERROR: persom is not defined
+
+Use strict means all variables must be explicity declared.
+Can also add to individual functions, strict mode can be scoped to individual function EC.
+
+Not every JS engine implements 'use strict' the same way.
+Can also cause problems if multiple JS files get combined together,
+if the first one has 'use strict' then it'll happen for all files.
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
