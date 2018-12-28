@@ -231,3 +231,10 @@ Have been making progress the past few days, but have gotten a bit lazy at updat
   - WB JavaScript 30
     - Completed Day 22 - Follow along links
       - New (to me) method: getBoundingClientRect()
+
+===== 12.28 =====
+  - Watched two videos of a mini-course on Youtube regarding Promises.
+    - Ultimately need to work on my SDL scraper bot code, which relies heavily on promises, need to do a deep dive on promises to better understand.
+    - Learned basic setup of using fetch and returning promises, resolve reject. Fetch returns object that you need to convert into JSON via .json(), but that also returns a promise.
+    - Promise chaining, need to explicitly return. Via single-line arrow functions don't need to do this since return is added.
+    - Want to continue the series, which covers promises.all (which i think will be useful for what I need to do) and async/await.
