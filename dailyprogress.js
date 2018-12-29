@@ -238,3 +238,8 @@ Have been making progress the past few days, but have gotten a bit lazy at updat
     - Learned basic setup of using fetch and returning promises, resolve reject. Fetch returns object that you need to convert into JSON via .json(), but that also returns a promise.
     - Promise chaining, need to explicitly return. Via single-line arrow functions don't need to do this since return is added.
     - Want to continue the series, which covers promises.all (which i think will be useful for what I need to do) and async/await.
+
+===== 12.29 =====
+  - Watched the final couple videos that I started yesterday, covering Promises, async/await, and Promise.all()
+    - Tried to update my drone law scraper based on this new knowledge, but I think the OpenStates API server is currently down. Kept getting empty array back regardless of what parameters I tried. Will check again later. Did manage to write out some pseudocode of what I want to try to accomplish.
+    - Instead shifted gears to fish app. Trying to build out the dashboard view. Still running into trouble getting the async/await incoporated into the middleware. 

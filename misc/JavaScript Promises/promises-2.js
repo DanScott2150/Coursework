@@ -1,5 +1,5 @@
 Mini Course: JavaScript Promises
-via https://www.youtube.com/watch?v=QO4NXhWo_NM
+via https://www.youtube.com/watch?v=AwyoVjVXnLk
 
 
         function setup(){
@@ -15,8 +15,9 @@ via https://www.youtube.com/watch?v=QO4NXhWo_NM
           console.log("Hello");
         }
 
-Bad code, but for example. Want to simulate some kind of delay, and
-then run separate code once it's done. Above code throws error at .then() because the delay() function does not return a promise.
+Bad code above, but for example purposes. Want to simulate some kind of delay, and
+then run separate code once it's done.
+Code throws error at .then() because the delay() function does not return a promise.
 
       function delay(time){
 
@@ -24,9 +25,9 @@ then run separate code once it's done. Above code throws error at .then() becaus
 
           if(isNan(time)){
             reject(new Error('Please use a valid number'));
-          }
-
+          } else {
           setTimeout(resolve, time);
+          }
         }
         return new Promise(dealWithPromise);
       }
