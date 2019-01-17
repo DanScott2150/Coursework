@@ -242,4 +242,26 @@ Have been making progress the past few days, but have gotten a bit lazy at updat
 ===== 12.29 =====
   - Watched the final couple videos that I started yesterday, covering Promises, async/await, and Promise.all()
     - Tried to update my drone law scraper based on this new knowledge, but I think the OpenStates API server is currently down. Kept getting empty array back regardless of what parameters I tried. Will check again later. Did manage to write out some pseudocode of what I want to try to accomplish.
-    - Instead shifted gears to fish app. Trying to build out the dashboard view. Still running into trouble getting the async/await incoporated into the middleware. 
+    - Instead shifted gears to fish app. Trying to build out the dashboard view. Still running into trouble getting the async/await incoporated into the middleware.
+
+===== 12.31 =====
+  - Fish App
+    - Success on the weather dashboard!
+      - Finagling with promsies
+      - Key was to switch rivers.forEach() to instead a for(river of rivers) loop
+         - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+      - Added dynamic dates to table
+      - Added SVG weather icons
+      - Improved design, using bootstrap table classes
+      - In c9 terminal, ubuntu command to change time zone. Default was UTC, which (after 8pm)
+        throws the dates off. https://askubuntu.com/questions/323131/setting-timezone-from-terminal/323163#323163
+
+===== 1.1 =====
+  - Fish App
+    - Added basic journal feature. Had to re-watch some of the Colt Steele Udemy course on YelpCamp,
+    basically mimmicked the 'comments' feature we added there.
+
+===== 1.17 =====
+  - Haven't been updating this file, but have been making significant project on my Fish App project.
+  - Also made significant progress on my Drone Law scraper project the past few days.
+  - Hoping to have both projects "share-able" by the end of the month.
