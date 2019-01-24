@@ -265,3 +265,9 @@ Have been making progress the past few days, but have gotten a bit lazy at updat
   - Haven't been updating this file, but have been making significant project on my Fish App project.
   - Also made significant progress on my Drone Law scraper project the past few days.
   - Hoping to have both projects "share-able" by the end of the month.
+
+===== 1.24 =====
+  - Wes Bos JavaScript 30: Day 2
+    - JavaScript/CSS clock
+      - CSS: Didn't realize you could do cool animations with just CSS, via transform/rotate, used transform-timing: cubic bezier()
+        to make a realistic "clock-tick" animation.
