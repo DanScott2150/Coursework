@@ -271,3 +271,13 @@ Have been making progress the past few days, but have gotten a bit lazy at updat
     - JavaScript/CSS clock
       - CSS: Didn't realize you could do cool animations with just CSS, via transform/rotate, used transform-timing: cubic bezier()
         to make a realistic "clock-tick" animation.
+
+===== 1.25 =====
+  - Fish App: Updated River edit route
+  - Node.js Course:
+    - Section 6: Testing
+      - Used Mocha to write basic tests. Used npm packages expect, rewire, supertest
+      - Using --save-dev to save dev dependencies, using nodemon to watch for tests
+      - Testing async code
+      - Course notes that it's tough to fully learn & understand tests via examples, next
+        sections in the course will include incorporating tests into other projects.
