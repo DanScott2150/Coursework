@@ -5,6 +5,9 @@ npm - mongodb native NodeJS driver
 https://github.com/mongodb/node-mongodb-native
 http://mongodb.github.io/node-mongodb-native/
 
+When launching mongod.exe via command line, need to specify db path
+(create folder for mongo data first)
+>> mongod.exe --dbpath /Users/Dan/mongo-data
 
 With Mongo, don't need to explicity create new Collection prior to adding items.
 
@@ -42,3 +45,57 @@ Find() returns results as a mongo 'Cursor', need to then pass into .toArray() to
 For updating items: Look up MongoDB update operators via docs.
 $set - lets us set a value of field in a document
 $inc - increment operator
+
+
+-- Mongoose ORM: Object Relational Mapping
+NPM library, makes it easy to structure data.
+Possible to do everything without mongoose, but it makes life easier.
+mongoosejs.com
+
+- Postman
+- Body-Parser, library that lets us send JSON to server
+
+
+Quick review- To get up and running:
+  1) Start MongoDB, pointing to folder where data is saved
+      Cmd: cd to C:\Program Files\MongoDB\Server\3.2\bin
+      Cmd: mongod.exe --dbpath /Users/Dan/mongo-data
+      Wait for message: "...waiting for connections on port 27017"
+
+  2) Second command prompt to launch server & app
+
+To set up testing:
+  - npm install expect mocha nodemon supertest --save-dev
+  - Update package.json:
+        "scripts": {
+          "test" : "mocha server/**/*.test.js",
+          "test-watch": "nodemon --exec \"npm test\""
+        }
+  - Need to add escape-slash because windows CMD needs double quotes around "npm test"
+
+To start test-watch process:
+  npm run test-watch
+
+-- Mongoose Queries & ID validation
+In first examples, used Todo.find()
+Can pass in no arguments to get all, or can pass in parameters to query.
+
+Mongoose can look up ID's as strings, even though _id is an ObjectID object.
+
+    var id= '5c4f6594092f612970c0cf3e';
+    Todo.find({
+      _id: id
+    });
+Returns an array of documents.
+
+Todo.findOne()
+Similar to find(), will only return one document, the first one that matches the query.
+Returns document object, rather than array.
+Also helpful for error handling: if nothing is found, it returns null rather than an empty array []
+
+Todo.findById(id)
+Only one argument, not passed as an object
+
+If the id is wrong, but fits mongo convention, will return null rather than throwing error. If id is incorrect and does not fit mongo convention, then will throw error.
+
+Can check if ObjectID is valid mongo ID via ObjectId.isValid() method

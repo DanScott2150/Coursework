@@ -8,6 +8,8 @@
 
 *ES6 Object destructuring: look if there's a way this would be beneficial in current projects
 
+*Also made minor change to this file: re-arranged entries into reverse chronological order.
+
 ===== 1.25 =====
   - Fish App: Updated River edit route
   - Node.js Course:
