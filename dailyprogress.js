@@ -1,3 +1,8 @@
+==== 1.31 =====
+  - Fish App project: Major progress this past week
+  - Wes Bos JS30:
+    - Completed Day 3: Playing with CSS Variables & JS
+
 ===== 1.26 =====
   - Node.js Course:
     - Section 7: Mongo, Mongoose, and REST API's (To-do App Project)
