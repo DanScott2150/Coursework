@@ -4,16 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean" : "rd /s /q dist .cache",
+    "clean": "rd /s /q dist .cache",
     "start": "npm run clean && parcel src/index.html",
-    "dev" : "npm run start"
+    "dev": "npm run start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "react": "^16.8.2",
-    "react-dom": "^16.8.2"
+    "react-bootstrap": "^1.0.0-beta.5",
+    "react-dom": "^16.8.2",
+    "redux": "^4.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
