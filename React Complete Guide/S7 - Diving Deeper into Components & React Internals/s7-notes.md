@@ -1,3 +1,35 @@
+
+## Class-based vs. Functional Components
+With new React version, not as much of a difference between the two as there used to be. BUT, most existing React projects will be built with the old code.
+
+  - Class based:
+      - class XY extends Component
+      - Access to state
+      - Lifecycle hooks
+      - Access state & props via 'this' (this.state.XY / this.props.XY)
+
+  - functional:
+      - const XY = (props) => {...}
+      - In the past, they could not manage state. Now they can via React Hooks by useState()
+      - No lifecycle hooks
+      - Access props via 'props' (props.XY)
+
+When working with state or need lifecycle hooks, use class-based, and/if you don't want to use react hooks.
+
+Use functional for all presentational components, that only receive input.
+
+## Component Lifecycle
+Only available in class-based components
+IMPORTANT: confusing naming, but "Lifecycle Hooks" have absolutely nothing to do with new "React Hooks"
+
+  -  Creation
+      - constructor(props) - ES6 class feature
+      - getDerivedStateFromProps(props, state) - rare, niche cases
+      - render() - prepare & structure JSX code
+        - render child components
+      - componentDidMount() - will get used a lot. Here's where you do 'side effects' like HTTP requests. Shouldn't update state here since it triggers a re-render
+      
+
 Stateless vs. Stateful components. Should aim to use stateless components as much as possible, keeps app manageable
 Use class based components as little as possible.
 
