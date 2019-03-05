@@ -33,3 +33,10 @@ State:
     - Total Price: $xx.xx
 Good idea to manage state within Burger Builder Component, rather than overall App component. Makes App more flexible/scalable if we want to add extra features or functionality later on.
     - Burger Builder should be stateful component. All others can be stateless.
+
+
+When rendering JSX, can return null. Just means that nothing gets rendered.
+
+props.show ? <div>content</div> : null
+
+^ if props.show is true, render div, otherwise do nothing.
