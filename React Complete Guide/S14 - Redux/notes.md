@@ -17,3 +17,13 @@ Updated Central Store -> Triggers (Automatic) Subscription -> Passes updated sta
 
 Action- contains pre-defined information package
 Reducer - Receive's action and updates state. Synchronous functions only, no HTTP requests.
+
+
+
+## S16: Advanced React
+
+Adding Middleware to Redux
+
+
+
+
