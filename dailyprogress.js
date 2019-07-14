@@ -1,3 +1,7 @@
+=== 7.14 ===
+Going through a in-depth deep dive on ES6
+Today: Object destructuring, Object literal notation
+
 ==== 1.31 =====
   - Fish App project: Major progress this past week
   - Wes Bos JS30:
